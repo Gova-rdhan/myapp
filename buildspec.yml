@@ -6,9 +6,6 @@ phases:
       java: corretto11
     commands:
       # Install Maven
-  pre_build:
-    commands:
-      # Set the path to the application.properties file
   build:
     commands:
       # Build the Spring Boot application
@@ -16,8 +13,9 @@ phases:
       
   post_build:
     commands:
-      # Copy the built JAR file to the root directory
+      # Copy the built WAR file to the root directory
+      cp target/HelloWorld-0.0.1-SNAPSHOT.war app.war
       
 artifacts:
   files:
-    - 'target/HelloWorld-0.0.1-SNAPSHOT.war'
+    - app.war
