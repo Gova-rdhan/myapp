@@ -13,9 +13,11 @@ phases:
     commands:
       # Build the Spring Boot application
       mvn install
+      
   post_build:
     commands:
       # Copy the built JAR file to the root directory
+      
 artifacts:
   files:
     - 'target/HelloWorld-0.0.1-SNAPSHOT.war'
